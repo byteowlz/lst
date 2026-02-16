@@ -1,0 +1,131 @@
+# tool.toml - lst metadata for byteowlz.com/toolz/lst
+
+"$schema" = "https://raw.githubusercontent.com/byteowlz/schemas/refs/heads/main/govnr/tool.schema.json"
+
+name = "lst"
+title = "lst"
+tagline = "A personal lists & notes app with encrypted multi-device sync"
+
+description = """
+Manage your personal lists and notes from the terminal, desktop, or mobile. Plain-text markdown storage, offline-first design, and CRDT-based encrypted sync across devices.
+
+Features a CLI, Tauri desktop and mobile apps, a sync daemon, and a self-hostable server. Supports theming (base16/base24), fuzzy matching, daily notes, image management, and JSON output for scripting.
+
+Built for both humans and AI agents. Use the CLI for quick list management, pipe JSON for automation, or integrate via MCP server.
+"""
+
+language = "rust"
+category = "toolz"
+version = "0.1.1"
+license = "proprietary"
+
+# ============================================================================
+# Installation
+# ============================================================================
+
+[install]
+cargo = "lst"
+
+# ============================================================================
+# Links
+# ============================================================================
+
+[links]
+github = "https://github.com/WismutHansen/lst"
+
+# ============================================================================
+# Features
+# ============================================================================
+
+[[features]]
+title = "List Management"
+description = "Create, edit, and organize personal lists with markdown-based plain-text storage"
+
+[[features]]
+title = "Note Taking"
+description = "Daily notes, general notes, and image management with YAML frontmatter"
+
+[[features]]
+title = "Encrypted Multi-Device Sync"
+description = "CRDT-based encrypted synchronization via a self-hostable server and sync daemon"
+
+[[features]]
+title = "Desktop & Mobile Apps"
+description = "Tauri-based desktop and mobile apps with live theme switching and CodeMirror editing"
+
+[[features]]
+title = "Theme System"
+description = "Comprehensive base16/base24 theming with built-in themes like Catppuccin, Gruvbox, Nord, and Solarized"
+
+[[features]]
+title = "Agent-Friendly"
+description = "JSON output, MCP server integration, and scriptable CLI for automation and AI agent workflows"
+
+# ============================================================================
+# Examples
+# ============================================================================
+
+[[examples]]
+title = "Quick Start"
+language = "bash"
+code = """
+# List all lists
+lst ls
+
+# Create a new list
+lst new groceries
+
+# Add items to a list
+lst add groceries "milk, eggs, bread"
+
+# Mark items as done
+lst done groceries milk
+"""
+
+[[examples]]
+title = "Notes & Daily"
+language = "bash"
+code = """
+# Open today's daily note
+lst dn
+
+# Create a new note
+lst note new "Meeting Notes"
+
+# List all notes
+lst note ls
+"""
+
+[[examples]]
+title = "JSON & Automation"
+language = "bash"
+code = """
+# List items as JSON
+lst ls groceries --json
+
+# Pipe items into a list
+echo "apples\nbananas" | lst pipe fruits
+
+# Sync across devices
+lst sync start
+lst sync status
+"""
+
+# ============================================================================
+# Media
+# ============================================================================
+
+[media]
+logo = "logo/lst_logo_icon_white.svg"
+screenshot = "Banner_black.png"
+
+# ============================================================================
+# Metadata
+# ============================================================================
+
+[meta]
+keywords = ["lists", "notes", "cli", "sync", "crdt", "markdown", "offline-first", "tauri"]
+platforms = ["linux", "macos"]
+related = ["hmr", "byt"]
+status = "beta"
+listed = true
