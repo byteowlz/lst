@@ -1,6 +1,6 @@
 # tool.toml - lst metadata for byteowlz.com/toolz/lst
 
-"$schema" = "https://raw.githubusercontent.com/byteowlz/schemas/refs/heads/main/govnr/tool.schema.json"
+#:schema https://raw.githubusercontent.com/byteowlz/schemas/refs/heads/main/govnr/tool.schema.json
 
 name = "lst"
 title = "lst"
